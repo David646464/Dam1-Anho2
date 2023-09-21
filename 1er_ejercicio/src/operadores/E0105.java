@@ -1,5 +1,5 @@
 //Creador:david sánchez peso
-package ejerciciosVariados;
+package operadores;
 
 public class E0105 {
     public static void main(String[] args) {

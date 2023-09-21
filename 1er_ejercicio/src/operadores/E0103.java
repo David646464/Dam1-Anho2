@@ -1,5 +1,5 @@
 //Creador:david sánchez peso
-package ejerciciosVariados;
+package operadores;
 
 import java.time.LocalDate;
 import java.util.Scanner;
