@@ -37,6 +37,7 @@ public class E0111 {
         System.out.println("Peras = " + String.format("%.2f", perasSemes1 * 1.95) + " euros");
         System.out.println("Manzanas = " + String.format("%.2f", manzaSemes1 * 2.35) + " euros");
 
+        
         System.out.println("SEMESTRE 2");
         System.out.println("Peras = " + String.format("%.2f", perasSemes2 * 1.95) + " euros");
         System.out.println("Manzanas = " + String.format("%.2f", manzaSemes2 * 2.35) + " euros");

@@ -12,7 +12,7 @@ public class E0109 {
          Scanner sc = new Scanner(System.in);
          System.out.println("Introduce un numero entero");
          int numero = sc.nextInt();
-         boolean booleano = numero%2 >= 0;
+         boolean booleano = numero % 2 >= 0;
          System.out.println(booleano);
     }
     

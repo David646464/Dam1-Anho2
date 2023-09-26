@@ -12,7 +12,7 @@ public class E0114 {
         System.out.println("Introduce un número decimal");
         double numero = sc.nextDouble();
 
-        System.out.println("el numero entero mas proximo es: " + Math.floor(numero));
+        System.out.println("el numero entero mas proximo es: " + Math.round(numero));
     }
     
 }

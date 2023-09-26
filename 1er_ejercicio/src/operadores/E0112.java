@@ -13,7 +13,10 @@ public class E0112 {
 
         System.out.println("Introduce el número entero");
         int numero = sc.nextInt();
+
         int numeroAbsoluto = (numero >= 0) ? numero : (numero * (-1));
+
+        /* variable = (condicion) ? (valor si es true) : (valor si es false) */
 
         
        
