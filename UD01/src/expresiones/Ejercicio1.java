@@ -43,6 +43,25 @@ public class Ejercicio1 {
         System.out.println("k)");
         System.out.println("(a * a + 2 * a * b + b * b) / (( 1 / (x * x)) + 2)");
 
+        //Ejercicio 2
+        /*Convierte en 
+        expresiones algorítmicas 
+        las siguientes expresiones 
+        algebráicas. Coloca paréntesis 
+        solamente donde sean necesarios */
+        //a)
+
+        //b)
+
+        //c)
+
+        //d)
+
+        //e)
+
+        //f)
+
+        //g)
     }
     
 }
