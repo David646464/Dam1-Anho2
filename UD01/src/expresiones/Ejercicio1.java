@@ -32,6 +32,16 @@ public class Ejercicio1 {
         System.out.println("m + n / (p - q)");
         //h)
         System.out.println("h)");
+        System.out.println("a * a / (b * b) + c * c / (d + d)");
+        //i)
+        System.out.println("i)");
+        System.out.println("(m + n / p) / (q - r / s)");
+        //j)
+        System.out.println("j)");
+        System.out.println("(3 * a + b ) / (c - (( d + 5 * e ) / (f + (g / 2 * h))))");
+        //k)
+        System.out.println("k)");
+        System.out.println("(a * a + 2 * a * b + b * b) / (( 1 / (x * x)) + 2)");
 
     }
     
