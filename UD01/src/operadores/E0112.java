@@ -19,7 +19,6 @@ public class E0112 {
         /* variable = (condicion) ? (valor si es true) : (valor si es false) */
 
         
-       
         System.out.println("El valor absoluto de " + numero + " es: " + numeroAbsoluto);
         
             

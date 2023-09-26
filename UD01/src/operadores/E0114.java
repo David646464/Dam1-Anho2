@@ -13,6 +13,7 @@ public class E0114 {
         double numero = sc.nextDouble();
 
         System.out.println("el numero entero mas proximo es: " + Math.round(numero));
+            
     }
     
 }

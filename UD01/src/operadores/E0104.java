@@ -11,7 +11,7 @@ public class E0104 {
         ya haya cumplido años.*/
 
         Scanner sc = new Scanner(System.in);
-       
+
 
         System.out.println("Introduce el año actual");
         int actualYear = sc.nextInt();
