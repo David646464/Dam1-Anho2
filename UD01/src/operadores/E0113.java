@@ -28,7 +28,9 @@ public class E0113 {
         System.out.println("SEGUNDO TRIMESTRE -->" + nota2);
         System.out.println("TERCER TRIMESTRE -->" + nota3);
         System.out.println("NOTA BOLETIN -->" + (nota1 + nota2 + nota3)/3);
-        System.out.println("NOTA EXPEDIENTE -->" + String.format("%.3f",((double)(nota1 + nota2 + nota3)/3)));
+        System.out.println("NOTA EXPEDIENTE -->" + String.format("%.3f",(double)(nota1 + nota2 + nota3)/3));
+        System.out.printf("%.2f", 3.456);
+        
 
     }
     
