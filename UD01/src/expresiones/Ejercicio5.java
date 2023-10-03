@@ -58,7 +58,7 @@ public class Ejercicio5 {
         boolean result = true != cadena.contains(A);
 
         Comprobar si el contenido de la variable N termina en 0 ó en 7
-        cadenaMax.charAt(cadenaMax.length() - 1) == '0' || cadenaMax.charAt(cadenaMax.length() - 1) == '7'
+        N.charAt(N.length() - 1) == '0' || N.charAt(N.length() - 1) == '7'
         
         Comprobar si el contenido de la variable precio es igual o mayor que 10€ y menor que 50€
         precio >= 10 && precio < 50
@@ -98,22 +98,49 @@ public class Ejercicio5 {
         Z = X + Y
         
         Con DN, MN, AN  día, mes y año de nacimiento de una persona y DA, MA, AA día, mes y año actual, escribe la expresión algorítmica que compruebe si tiene 18 años cumplidos.
-        AA - AN
-        (MN > MA)
-        18 == ((MN > MA) ? ((DN > DA) ? AA - AN : AA - AN - 1)  : AA - AN 
+        18 <= ((MA >= MN) ? ((DA >= DN) ? AA - AN : AA - AN - 1)  : AA - AN - 1 )
 
         Dado un número N de cuatro cifras, comprobar si la primera cifra(la más a la izquierda) es impar.
+        N / 1000 % 2 == 1
+
         Dado un número N de cinco cifras, comprobar si la primera cifra (la más a la izquierda) es igual a la segunda.
         (N  10000) == ((N % 100)  10)
+
         Determinar si un número entero N de 5 cifras es capicúa.
+        N % 10 == N / 10000 && (N % 1000 / 10) == (N / 1000 % 10)
+
         Comprobar si una variable C de tipo char contiene una vocal mayúscula.
+        String C = "J";
+        String cadena = "AEIOU";
+        boolean result =  cadena.contains(C);
+
         Comprobar si una variable C de tipo char no contiene una vocal mayúscula.
+        String C = "J";
+        String cadena = "AEIOU";
+        boolean result =  true != cadena.contains(C);
+
         Dadas dos variables A y B de tipo char, comprobar si las dos contienen una vocal minúscula.
+        String A = "J";
+        String B = "J";
+        String cadena = "aeiou";
+        boolean result =   cadena.contains(A);
+        boolean result =   cadena.contains(B);
+        
         Dada una variable A que contiene un año, determinar si ese año es bisiesto. Un año es bisiesto si es divisible por 4 y no por 100 ó si es divisible por 400.
+        (A % 100 == 0 ) ? false : (A % 4 == 0)
+        
         Dado un número N de dos cifras, comprobar si las dos cifras son iguales.
+        N % 10 == N / 10
+        
         Dado un número N de dos cifras, comprobar si la suma de sus cifras es un número par.
+        (N % 10 + N / 10) % 2 == 0
+        
         Dado un número N de tres cifras, comprobar si la cifra del centro es la mayor.
+        N / 10 % 10 > N / 100 && N / 10 % 10 > N % 10
+        
         Dado un número N de cuatro cifras, comprobar si alguna de las cifras es un 4.
+        N / 1000 == 4 || N / 100 % 10 || N / 10 % 10 || N % 10
+        
         Dado un número N de 4 cifras, asigna a una variable X las dos primeras cifras del número.
         Dado un número entero N, modifícalo restando a N el valor de su última cifra. Por ejemplo, si N = 123, el valor final de N debe ser 120.
         Dados dos números enteros N y M, modifica M restándole la última cifra de N.  Por ejemplo si M = 123 y N = 47, el valor final de M debe ser 116.

@@ -3,7 +3,7 @@ public class App {
         System.out.println("Hello, World!");
         String cadenaMax = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
         String cadenaMin = "abcdefghijklmnñopqrstuvwxyz";
-        char A = '1';
+        char A = 2000;
         
         String cadenaNum = "0123456789";
         char a = cadenaMax.charAt(cadenaMax.length() - 1);
@@ -15,7 +15,7 @@ public class App {
 
         int AN = 2000;
         int AA = 2018;
-        boolean result = 18 <= ((MA >= MN) ? ((DA >= DN) ? AA - AN : AA - AN - 1)  : AA - AN - 1 );
+        boolean result = (A % 100 == 0 ) ? false : (A % 4 == 0);
         System.out.println(result);
     }
 }
