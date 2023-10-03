@@ -10,22 +10,22 @@ import java.nio.charset.Charset;
 import java.util.Scanner;
 
 public class Apuntes {
-   
+
     
     public static void main(String[] args) {
         System.out.println(NumAleat(1, 4));
-       
+
     }
 
     /*número aletorio entre los numeros dados los cuales estan incluidos usando math.random, 
     el primero desde donde comienza el intervalo y el segundo donde termina (a <= numero >= b)*/
-     public static int NumAleat(int a, int b){
+    public static int NumAleat(int a, int b){
         int numero =0;
-       
-         numero = (a) + (int) (Math.random()*((b-a) + 1));
-     
+
+        numero = (a) + (int) (Math.random()*((b-a) + 1));
+    
         return numero;
-     }  
+    }  
     /*Programa que identifica primos con bucle for */
     public static boolean IdetPrimos(int a){
         
@@ -41,7 +41,7 @@ public class Apuntes {
                 }
             }
         }
-       return aux;
+    return aux;
     }
 
     /*Codigo para identificar pares e impares */

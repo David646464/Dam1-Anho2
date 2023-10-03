@@ -12,7 +12,7 @@ public class Identificadores {
     //$totalVentas 
     int totalVentas = 34;
     //mi_nombre 
-     String miNombre = "david";
+    String miNombre = "david";
     //4everYoung 
     Boolean young4ever = true;
     //_variable
