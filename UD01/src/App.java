@@ -17,6 +17,7 @@ public class App {
         int AA = 2018;
         N += (N >= 0) ? 5 : 10;
         boolean result = (A % 100 == 0 ) ? false : (A % 4 == 0);
-        System.out.println(result);
+
+        System.out.println();
     }
 }
