@@ -7,7 +7,10 @@ public class Ahorcado {
         Scanner sc = new Scanner(System.in);
         boolean victoria = false;
         boolean aux = false;
-        String palabraSecreta = "programacion";
+        PullAhorcado pull = new PullAhorcado();
+        String[] palabraSecret = pull.palabraPull();
+        String palabraSecreta = palabraSecret[1];
+        String categoria = palabraSecret[0];
         String palabramostrada = "";
         String palabramostradaAux = "";
         char letraAux = 'a';
@@ -22,7 +25,10 @@ public class Ahorcado {
         while (victoria != true && contador < 7) {
             aux = false;
             palabramostrada = "";
-
+            System.out.println("=================================");
+            System.out.println("CATEGORIA: " + categoria);
+            System.out.println("=================================");
+            System.out.println("Introduce tu letra: ");
             char letra = sc.next().charAt(0);
             if (letrasUsadas.contains(Character.toString(letra))) {
                 System.out.println("Esa letra ya ha sido introducida");
@@ -43,6 +49,7 @@ public class Ahorcado {
                 palabramostradaAux = palabramostrada;
                 letrasUsadas += Character.toString(letra);
             }
+            
             System.out.println("=================================");
             System.out.println("PALABRA:");
             System.out.println(palabramostradaAux);
@@ -133,19 +140,22 @@ public class Ahorcado {
                     System.out.println("     |");
                     System.out.println(" ____|");
                 }
-                
+
             }
             System.out.println("=================================");
             if (palabramostradaAux.equals(palabraSecreta)) {
                 victoria = true;
             }
-            // }
+            
 
             if (victoria == true) {
                 System.out.println("Ganastes");
             } else if (contador >= 7) {
                 System.out.println("Perdistes");
+                System.out.println("La palabra era: " + palabraSecreta);
             }
+            
+            
 
         }
     }
