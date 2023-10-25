@@ -250,8 +250,8 @@ public class PullAhorcado {
         }
 
         public String[] palabraPull() {
-                int numeroAleatorio1 = (int) (Math.random() * (map2.size() - 1));
-                int numeroAleatorio2 = (int) (Math.random() * (map2.get(numeroAleatorio1).length) - 1);
+                int numeroAleatorio1 = (int) (Math.random() * (map2.size() ));
+                int numeroAleatorio2 = (int) (Math.random() * (map2.get(numeroAleatorio1).length) );
                 String[] Aux = { categoriaPull(numeroAleatorio1), map2.get(numeroAleatorio1)[numeroAleatorio2] };
                 return Aux;
         }

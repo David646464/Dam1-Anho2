@@ -19,9 +19,18 @@ public class Ahorcado {
         int contador = 0;
 
         for (int i = 0; i < palabraSecreta.length(); i++) {
-            palabramostradaAux += " ";
+
+            if (palabraSecreta.charAt(i) == ' ') {
+                palabramostradaAux += " ";
+            } else {
+                palabramostradaAux += "_";
+            }
+
         }
 
+        System.out.println("=================================");
+        System.out.println("PALABRA:");
+        System.out.println(palabramostradaAux);
         while (victoria != true && contador < 7) {
             aux = false;
             palabramostrada = "";
@@ -49,7 +58,7 @@ public class Ahorcado {
                 palabramostradaAux = palabramostrada;
                 letrasUsadas += Character.toString(letra);
             }
-            
+
             System.out.println("=================================");
             System.out.println("PALABRA:");
             System.out.println(palabramostradaAux);
@@ -146,7 +155,6 @@ public class Ahorcado {
             if (palabramostradaAux.equals(palabraSecreta)) {
                 victoria = true;
             }
-            
 
             if (victoria == true) {
                 System.out.println("Ganastes");
@@ -154,8 +162,6 @@ public class Ahorcado {
                 System.out.println("Perdistes");
                 System.out.println("La palabra era: " + palabraSecreta);
             }
-            
-            
 
         }
     }
