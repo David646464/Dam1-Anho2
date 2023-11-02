@@ -1,4 +1,4 @@
-package condicionalesParaninfo;
+package condicionalesparaninfo;
 
 import java.util.Scanner;
 
@@ -9,7 +9,7 @@ public class EP0214 {
 
         System.out.println("Escribe un número entre 1 y 99 inclusive: ");
         int numero = sc.nextInt();
-
+        sc.close();
         texto = "";
         switch (numero / 10) {
             case 9 -> {

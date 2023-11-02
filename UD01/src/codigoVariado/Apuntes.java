@@ -13,7 +13,7 @@ public class Apuntes {
 
     
     public static void main(String[] args) {
-        System.out.println(NumAleat(-25, 42));
+        System.out.println(NumAleat(-200, 200));
 
     }
 

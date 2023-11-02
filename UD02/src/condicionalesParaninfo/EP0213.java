@@ -1,4 +1,4 @@
-package condicionalesParaninfo;
+package condicionalesparaninfo;
 
 import java.util.Scanner;
 
@@ -11,6 +11,7 @@ public class EP0213 {
         int numAnimales = sc.nextInt();
         System.out.println("Introduce la comida diaria que come de media cada animal");
         double kilosPorAnimal = sc.nextDouble();
+        sc.close();
         if (numAnimales > 0) {
             if (kilosPorAnimal * numAnimales <= comidaDiaria) {
                 System.out.println("La comida es suficiente");

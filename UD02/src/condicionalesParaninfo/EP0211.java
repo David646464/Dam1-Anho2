@@ -1,4 +1,4 @@
-package condicionalesParaninfo;
+package condicionalesparaninfo;
 
 import java.util.Scanner;
 
@@ -8,7 +8,7 @@ public class EP0211 {
         boolean esCapicua = true;
         System.out.println("Escribe un número entre 0 y 9999 inclusive: ");
         int numero = sc.nextInt();
-
+        sc.close();
         if (numero / 1000 > 0) {
             if (numero / 1000 != numero % 10 && numero % 1000 / 100 != numero % 100 / 10) {
                 esCapicua = false;
