@@ -17,4 +17,9 @@ public class E0411Test {
 
         
     }
+
+    @Test
+    void testMcdMain2() {
+        
+    }
 }

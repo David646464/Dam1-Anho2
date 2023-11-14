@@ -23,7 +23,7 @@ public class EP0315 {
             auxInt = auxInt * i;
         }
         return auxInt;
-    }
+    }   
 
     public static int calculatePascal(int n, int m) {
         if (m == 0 || m == n) {

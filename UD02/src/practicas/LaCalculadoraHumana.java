@@ -14,6 +14,7 @@ public class LaCalculadoraHumana {
     static final int TIEMPO = 60;
     static final int MAXOPERACIONES = 7;
     static int fallos = 0;
+    
 
     public static void main(String[] args) {
         calculadoraHumana();
