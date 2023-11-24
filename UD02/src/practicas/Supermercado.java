@@ -118,9 +118,9 @@ public class Supermercado {
     private static void imprimeCambio(int cambio, int billeteMoneda, int indicador) {
         if (cambio > 0) {
             if (indicador == 1) {
-                tikect += (cambio + " billetes de " + billeteMoneda + " euros" + "\n");
+                tikect += (cambio + " billetes de " + billeteMoneda + " euros");
             } else if (indicador == 2) {
-                tikect += (cambio + " monedas de " + billeteMoneda + " euros" + "\n");
+                tikect += (cambio + " monedas de " + billeteMoneda + " euros");
             } else if (indicador == 3) {
                 tikect += (cambio + " monedas de " + billeteMoneda + " centimos" + "\n");
             }
