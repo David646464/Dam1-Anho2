@@ -57,6 +57,11 @@ public class Sintonizador {
         this.frecuenciaGuardada3 = frecuenciaGuardada3;
     }
 
+    /**
+     * Aumneta 05 la frecuencia
+     */
+
+
     public void up05() {
         if (frecuencia >= FRECUENCIA_MAXIMA) {
             frecuencia = FRECUENCIA_MINIMA;

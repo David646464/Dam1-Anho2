@@ -2,6 +2,8 @@ package ejerciciosApuntes.claseMath;
 
 import java.util.Arrays;
 
+
+
 public class ClaseAuxiliar {
     /*
      * NumAleat(double i, double j) -> devuelve un numero decimal entre i y j
@@ -34,27 +36,36 @@ public class ClaseAuxiliar {
      *
      */
     public static void main(String[] args) {
-        System.out.println("A");
+        double[] a = {1.2,1.3,1.4};
+
+    }
+    public static  boolean esPrimo(int numero){
+        boolean esPrimo = true;
+        for (int i = 2; i < (numero + 1) / 2; i++) {
+            if (numero % i == 0) {
+                esPrimo = false;
+                break;
+            }
+        }
+        return  esPrimo;
     }
 
     // Numero aleatorio double
-    public static double NumAleat(double i, double j) {
-
-        double numero = 0;
-
-        numero = (i) + (Math.random() * ((j - i)));
+    public static double numAleat(double i, double j) {
+        double numero = (i) + (Math.random() * ((j - i)));
         if (numero > j) {
             numero -= 1;
         } else if (numero < i) {
             numero += 1;
         }
         return numero;
+
+
     }
+
     // Numero aleatorio int
-
-    public static int NumAleat(int i, int j) {
-        int numero = 0;
-
+    public static int numAleat(int i, int j) {
+        int numero;
         numero = (i) + (int) (Math.random() * ((j - i) + 1));
 
         return numero;
@@ -62,67 +73,66 @@ public class ClaseAuxiliar {
 
     // Numero redondeado hacia abajo double
 
-    public static double NumRendonAbajo(double numero) {
+    public static double numRendonAbajo(double numero) {
 
-        double numeroCarculado = Math.ceil(numero);
+        double numeroCarculado;
+        numeroCarculado = Math.ceil(numero);
 
         return numeroCarculado;
     }
 
     // Numero redondeado hacia arriba double
-    public static double NumRendonArriba(double numero) {
+    public static double numRendonArriba(double numero) {
 
-        double numeroCarculado = Math.floor(numero);
+        double numeroCarculado;
+        numeroCarculado = Math.floor(numero);
 
         return numeroCarculado;
     }
 
     // Numero redondeado hacia el mas cercano double
-    public static double NumRendonCercano(double numero) {
+    public static double numRendonCercano(double numero) {
 
-        double numeroCarculado = Math.round(numero);
+        double numeroCarculado;
+        numeroCarculado = Math.round(numero);
 
         return numeroCarculado;
     }
 
     // raiz devuelve double
-    public static double NumRaiz(double numero) {
+    public static double numRaiz(double numero) {
 
-        double numeroCarculado = Math.sqrt(numero);
+        double numeroCarculado;
+        numeroCarculado = Math.sqrt(numero);
 
         return numeroCarculado;
     }
 
     // valor absoluto devuelve double
-    public static double NumValorAbsoluto(double numero) {
+    public static double numValorAbsoluto(double numero) {
 
-        double numeroCarculado = Math.abs(numero);
+        double numeroCarculado;
+        numeroCarculado = Math.abs(numero);
 
         return numeroCarculado;
     }
 
     // Potencia devuelve double
-    public static double NumPotencia(double numero, double potencia) {
-
-        double numeroCarculado = Math.pow(numero, potencia);
-
-        return numeroCarculado;
+    public static double numPotencia(double numero, double potencia) {
+        return Math.pow(numero, potencia);
     }
 
     // Logaritmo devuelve double
-    public static double NumLogaritmo(double numero) {
-
-        double numeroCarculado = Math.log(numero);
-
-        return numeroCarculado;
+    public static double numLogaritmo(double numero) {
+        return Math.log(numero);
     }
 
     // Buscar mas grande en una lista int
-    public static int BuscarElMasGrande(int[] ListaNumeros) {
+    public static int buscarElMasGrande(int[] ListaNumeros) {
         int aux = -999999999;
-        for (int i = 0; i < ListaNumeros.length; i++) {
-            if (ListaNumeros[i] > aux) {
-                aux = ListaNumeros[i];
+        for (int listaNumero : ListaNumeros) {
+            if (listaNumero > aux) {
+                aux = listaNumero;
             }
         }
 
@@ -130,11 +140,11 @@ public class ClaseAuxiliar {
     }
 
     // Buscar mas grande en una lista double
-    public static double BuscarElMasGrande(double[] ListaNumeros) {
+    public static double buscarElMasGrande(double[] ListaNumeros) {
         double aux = -999999999;
-        for (int i = 0; i < ListaNumeros.length; i++) {
-            if (ListaNumeros[i] > aux) {
-                aux = ListaNumeros[i];
+        for (double listaNumero : ListaNumeros) {
+            if (listaNumero > aux) {
+                aux = listaNumero;
             }
         }
 
@@ -142,11 +152,11 @@ public class ClaseAuxiliar {
     }
 
     // Buscar mas pequeño en una lista int
-    public static int BuscarElMasPequeño(int[] ListaNumeros) {
+    public static int buscarElMasBajo(int[] ListaNumeros) {
         int aux = 999999999;
-        for (int i = 0; i < ListaNumeros.length; i++) {
-            if (ListaNumeros[i] < aux) {
-                aux = ListaNumeros[i];
+        for (int listaNumero : ListaNumeros) {
+            if (listaNumero < aux) {
+                aux = listaNumero;
             }
         }
 
@@ -154,11 +164,11 @@ public class ClaseAuxiliar {
     }
 
     // Buscar mas pequeño en una lista double
-    public static double BuscarElMasPequeño(double[] ListaNumeros) {
+    public static double buscarElMasBajo(double[] ListaNumeros) {
         double aux = 999999999;
-        for (int i = 0; i < ListaNumeros.length; i++) {
-            if (ListaNumeros[i] < aux) {
-                aux = ListaNumeros[i];
+        for (double listaNumero : ListaNumeros) {
+            if (listaNumero < aux) {
+                aux = listaNumero;
             }
         }
 
@@ -167,7 +177,7 @@ public class ClaseAuxiliar {
 
     // Elimina de un array un elemento con el indice.
     // int
-    public static int[] EliminarEnUnaLista(int[] lista, int indice) {
+    public static int[] eliminarEnUnaLista(int[] lista, int indice) {
         int[] listaAux = new int[lista.length - 1];
         if (indice + 1 <= lista.length && indice >= 0) {
 
@@ -181,7 +191,7 @@ public class ClaseAuxiliar {
 
     // Elimina de un array un elemento con el indice.
     // double
-    public static double[] EliminarEnUnaLista(double[] lista, int indice) {
+    public static double[] eliminarEnUnaLista(double[] lista, int indice) {
         double[] listaAux = new double[lista.length - 1];
         if (indice + 1 <= lista.length && indice >= 0) {
 
@@ -195,7 +205,7 @@ public class ClaseAuxiliar {
 
     // Elimina de un array un elemento con el indice.
     // String
-    public static String[] EliminarEnUnaLista(String[] lista, int indice) {
+    public static String[] eliminarEnUnaLista(String[] lista, int indice) {
         String[] listaAux = new String[lista.length - 1];
         if (indice + 1 <= lista.length && indice >= 0) {
 
@@ -209,7 +219,7 @@ public class ClaseAuxiliar {
 
     // Elimina de un array un elemento con el indice.
     // byte
-    public static byte[] EliminarEnUnaLista(byte[] lista, int indice) {
+    public static byte[] eliminarEnUnaLista(byte[] lista, int indice) {
         byte[] listaAux = new byte[lista.length - 1];
         if (indice + 1 <= lista.length && indice >= 0) {
 
@@ -223,7 +233,7 @@ public class ClaseAuxiliar {
 
     // Elimina de un array un elemento con el indice.
     // float
-    public static float[] EliminarEnUnaLista(float[] lista, int indice) {
+    public static float[] eliminarEnUnaLista(float[] lista, int indice) {
         float[] listaAux = new float[lista.length - 1];
         if (indice + 1 <= lista.length && indice >= 0) {
 
@@ -237,7 +247,7 @@ public class ClaseAuxiliar {
 
     // Elimina de un array un elemento con el indice.
     // char
-    public static char[] EliminarEnUnaLista(char[] lista, int indice) {
+    public static char[] eliminarEnUnaLista(char[] lista, int indice) {
         char[] listaAux = new char[lista.length - 1];
         if (indice + 1 <= lista.length && indice >= 0) {
 
@@ -251,7 +261,7 @@ public class ClaseAuxiliar {
 
     // Elimina de un array un elemento con el indice.
     // boolean
-    public static boolean[] EliminarEnUnaLista(boolean[] lista, int indice) {
+    public static boolean[] eliminarEnUnaLista(boolean[] lista, int indice) {
         boolean[] listaAux = new boolean[lista.length - 1];
         if (indice + 1 <= lista.length && indice >= 0) {
 
@@ -265,7 +275,7 @@ public class ClaseAuxiliar {
 
     // Elimina de un array un elemento con el indice.
     // long
-    public static long[] EliminarEnUnaLista(long[] lista, int indice) {
+    public static long[] eliminarEnUnaLista(long[] lista, int indice) {
         long[] listaAux = new long[lista.length - 1];
         if (indice + 1 <= lista.length && indice >= 0) {
 
@@ -279,7 +289,7 @@ public class ClaseAuxiliar {
 
     // Elimina de un array un elemento con el indice.
     // short
-    public static short[] EliminarEnUnaLista(short[] lista, int indice) {
+    public static short[] eliminarEnUnaLista(short[] lista, int indice) {
         short[] listaAux = new short[lista.length - 1];
         if (indice + 1 <= lista.length && indice >= 0) {
 
@@ -293,7 +303,7 @@ public class ClaseAuxiliar {
 
     // Añadir un elememtoa una lista
     // short
-    public static short[] AgregarAUnaLista(short[] lista, short elemento, int indice) {
+    public static short[] agregarAUnaLista(short[] lista, short elemento, int indice) {
         short[] listaAux = new short[lista.length + 1];
         if (indice + 1 <= lista.length && indice >= 0) {
 
@@ -308,7 +318,7 @@ public class ClaseAuxiliar {
 
     // Añadir un elememtoa una lista
     // long
-    public static long[] AgregarAUnaLista(long[] lista, long elemento, int indice) {
+    public static long[] agregarAUnaLista(long[] lista, long elemento, int indice) {
         long[] listaAux = new long[lista.length + 1];
         if (indice + 1 <= lista.length && indice >= 0) {
 
@@ -323,7 +333,7 @@ public class ClaseAuxiliar {
 
     // Añadir un elememtoa una lista
     // int
-    public static int[] AgregarAUnaLista(int[] lista, int elemento, int indice) {
+    public static int[] agregarAUnaLista(int[] lista, int elemento, int indice) {
         int[] listaAux = new int[lista.length + 1];
         if (indice + 1 <= lista.length && indice >= 0) {
 
@@ -338,7 +348,7 @@ public class ClaseAuxiliar {
 
     // Añadir un elememtoa una lista
     // double
-    public static double[] AgregarAUnaLista(double[] lista, double elemento, int indice) {
+    public static double[] agregarAUnaLista(double[] lista, double elemento, int indice) {
         double[] listaAux = new double[lista.length + 1];
         if (indice + 1 <= lista.length && indice >= 0) {
 
@@ -353,7 +363,7 @@ public class ClaseAuxiliar {
 
     // Añadir un elememtoa una lista
     // String
-    public static String[] AgregarAUnaLista(String[] lista, String elemento, int indice) {
+    public static String[] agregarAUnaLista(String[] lista, String elemento, int indice) {
         String[] listaAux = new String[lista.length + 1];
         if (indice + 1 <= lista.length && indice >= 0) {
 
@@ -368,7 +378,7 @@ public class ClaseAuxiliar {
 
     // Añadir un elememtoa una lista
     // boolean
-    public static boolean[] AgregarAUnaLista(boolean[] lista, boolean elemento, int indice) {
+    public static boolean[] agregarAUnaLista(boolean[] lista, boolean elemento, int indice) {
         boolean[] listaAux = new boolean[lista.length + 1];
         if (indice + 1 <= lista.length && indice >= 0) {
 
@@ -383,7 +393,7 @@ public class ClaseAuxiliar {
 
     // Añadir un elememtoa una lista
     // byte
-    public static byte[] AgregarAUnaLista(byte[] lista, byte elemento, int indice) {
+    public static byte[] agregarAUnaLista(byte[] lista, byte elemento, int indice) {
         byte[] listaAux = new byte[lista.length + 1];
         if (indice + 1 <= lista.length && indice >= 0) {
 
@@ -398,7 +408,7 @@ public class ClaseAuxiliar {
 
     // Añadir un elememtoa una lista
     // char
-    public static char[] AgregarAUnaLista(char[] lista, char elemento, int indice) {
+    public static char[] agregarAUnaLista(char[] lista, char elemento, int indice) {
         char[] listaAux = new char[lista.length + 1];
         if (indice + 1 <= lista.length && indice >= 0) {
 
@@ -413,7 +423,7 @@ public class ClaseAuxiliar {
 
     // Añadir un elememtoa una lista
     // float
-    public static float[] AgregarAUnaLista(float[] lista, float elemento, int indice) {
+    public static float[] agregarAUnaLista(float[] lista, float elemento, int indice) {
         float[] listaAux = new float[lista.length + 1];
         if (indice + 1 <= lista.length && indice >= 0) {
 
@@ -428,15 +438,15 @@ public class ClaseAuxiliar {
 
     // Ordenar
     // String
-    public static String[] OrdenarAscen(String[] lista) {
-        String[] listaAux = lista;
+    public static String[] ordenarAscen(String[] lista) {
+        String[] listaAux = lista.clone();
         Arrays.sort(listaAux);
         return listaAux;
     }
 
-    public static String[] OrdenarDescen(String[] lista) {
+    public static String[] ordenarDescen(String[] lista) {
 
-        String[] listaAux = lista;
+        String[] listaAux = lista.clone();
         String[] listaAux2 = new String[lista.length];
         Arrays.sort(listaAux);
         int j = lista.length - 1;
@@ -449,16 +459,16 @@ public class ClaseAuxiliar {
 
     // Ordenar
     // int
-    //TODO modificar los auxiliares de los metodos
-    public static int[] OrdenarAscen(int[] lista) {
+
+    public static int[] ordenarAscen(int[] lista) {
         int[] listaAux = lista.clone();
         Arrays.sort(listaAux);
         return listaAux;
     }
 
-    public static int[] OrdenarDescen(int[] lista) {
+    public static int[] ordenarDescen(int[] lista) {
 
-        int[] listaAux = lista;
+        int[] listaAux = lista.clone();
         int[] listaAux2 = new int[lista.length];
         Arrays.sort(listaAux);
         int j = lista.length - 1;
@@ -471,15 +481,15 @@ public class ClaseAuxiliar {
 
     // Ordenar
     // double
-    public static double[] OrdenarAscen(double[] lista) {
-        double[] listaAux = lista;
+    public static double[] ordenarAscen(double[] lista) {
+        double[] listaAux = lista.clone();
         Arrays.sort(listaAux);
         return listaAux;
     }
 
-    public static double[] OrdenarDescen(double[] lista) {
+    public static double[] ordenarDescen(double[] lista) {
 
-        double[] listaAux = lista;
+        double[] listaAux = lista.clone();
         double[] listaAux2 = new double[lista.length];
         Arrays.sort(listaAux);
         int j = lista.length - 1;
@@ -492,15 +502,15 @@ public class ClaseAuxiliar {
 
     // Ordenar
     // float
-    public static float[] OrdenarAscen(float[] lista) {
-        float[] listaAux = lista;
+    public static float[] ordenarAscen(float[] lista) {
+        float[] listaAux = lista.clone();
         Arrays.sort(listaAux);
         return listaAux;
     }
 
-    public static float[] OrdenarDescen(float[] lista) {
+    public static float[] ordenarDescen(float[] lista) {
 
-        float[] listaAux = lista;
+        float[] listaAux = lista.clone();
         float[] listaAux2 = new float[lista.length];
         Arrays.sort(listaAux);
         int j = lista.length - 1;
@@ -513,15 +523,15 @@ public class ClaseAuxiliar {
 
     // Ordenar
     // byte
-    public static byte[] OrdenarAscen(byte[] lista) {
-        byte[] listaAux = lista;
+    public static byte[] ordenarAscen(byte[] lista) {
+        byte[] listaAux = lista.clone();
         Arrays.sort(listaAux);
         return listaAux;
     }
 
-    public static byte[] OrdenarDescen(byte[] lista) {
+    public static byte[] ordenarDescen(byte[] lista) {
 
-        byte[] listaAux = lista;
+        byte[] listaAux = lista.clone();
         byte[] listaAux2 = new byte[lista.length];
         Arrays.sort(listaAux);
         int j = lista.length - 1;
@@ -534,15 +544,15 @@ public class ClaseAuxiliar {
 
     // Ordenar
     // short
-    public static short[] OrdenarAscen(short[] lista) {
-        short[] listaAux = lista;
+    public static short[] ordenarAscen(short[] lista) {
+        short[] listaAux = lista.clone();
         Arrays.sort(listaAux);
         return listaAux;
     }
 
-    public static short[] OrdenarDescen(short[] lista) {
+    public static short[] ordenarDescen(short[] lista) {
 
-        short[] listaAux = lista;
+        short[] listaAux = lista.clone();
         short[] listaAux2 = new short[lista.length];
         Arrays.sort(listaAux);
         int j = lista.length - 1;
@@ -555,15 +565,16 @@ public class ClaseAuxiliar {
 
     // Ordenar
     // long
-    public static long[] OrdenarAscen(long[] lista) {
-        long[] listaAux = lista;
+    public static long[] ordenarAscen(long[] lista) {
+        long[] listaAux = lista.clone();
         Arrays.sort(listaAux);
         return listaAux;
+
     }
 
-    public static long[] OrdenarDescen(long[] lista) {
+    public static long[] ordenarDescen(long[] lista) {
 
-        long[] listaAux = lista;
+        long[] listaAux = lista.clone();
         long[] listaAux2 = new long[lista.length];
         Arrays.sort(listaAux);
         int j = lista.length - 1;
@@ -576,15 +587,15 @@ public class ClaseAuxiliar {
 
     // Ordenar
     // char
-    public static char[] OrdenarAscen(char[] lista) {
-        char[] listaAux = lista;
+    public static char[] ordenarAscen(char[] lista) {
+        char[] listaAux = lista.clone();
         Arrays.sort(listaAux);
         return listaAux;
     }
 
-    public static char[] OrdenarDescen(char[] lista) {
+    public static char[] ordenarDescen(char[] lista) {
 
-        char[] listaAux = lista;
+        char[] listaAux = lista.clone();
         char[] listaAux2 = new char[lista.length];
         Arrays.sort(listaAux);
         int j = lista.length - 1;
@@ -597,27 +608,19 @@ public class ClaseAuxiliar {
 
     // Letra esta en una cadena
     // Devueleve un boolean
-    public static boolean Contiene(String cadena, char letra) {
-        boolean contiene = false;
-        if (cadena.contains(Character.toString(letra))) {
-            contiene = true;
-        }
-        return contiene;
+    public static boolean contiene(String cadena, char letra) {
+        return cadena.contains(Character.toString(letra));
     }
 
     // Cadena esta en una cadena
     // Devueleve un boolean
-    public static boolean Contiene(String cadena, String cadenaABuscar) {
-        boolean contiene = false;
-        if (cadena.contains(cadenaABuscar)) {
-            contiene = true;
-        }
-        return contiene;
+    public static boolean contiene(String cadena, String cadenaABuscar) {
+        return cadena.contains(cadenaABuscar);
     }
 
     // Cadena tiene Uppercases
     // Devueleve un boolean
-    public static boolean ContieneUpperCase(String cadena) {
+    public static boolean contieneUpperCase(String cadena) {
         String Uppercases = "ABCDEFGHIJKLMNÑOPQRSTUVXYZ";
         boolean contiene = false;
 
@@ -633,7 +636,7 @@ public class ClaseAuxiliar {
 
     // Cadena tiene Uppercases
     // Devueleve un boolean
-    public static boolean ContieneLowerCase(String cadena) {
+    public static boolean contieneLowerCase(String cadena) {
         String LowerCases = "abcdefghijklmnñopqrstuvxyz";
         boolean contiene = false;
 
@@ -649,25 +652,16 @@ public class ClaseAuxiliar {
 
     // char tiene Uppercases
     // Devueleve un boolean
-    public static boolean ContieneUpperCase(char letra) {
+    public static boolean contieneUpperCase(char letra) {
         String Uppercases = "ABCDEFGHIJKLMNÑOPQRSTUVXYZ";
-        boolean contiene = false;
-
-
-        if (Uppercases.contains(Character.toString(letra))) {
-            contiene = true;
-
-        }
-
-
-        return contiene;
+        return Uppercases.contains(Character.toString(letra));
     }
 
     // char tiene LowerCases
     // Devueleve un boolean
 
-    /*TODO optimizar el codigo*/
-    public static boolean ContieneLowerCase(char letra) {
+
+    public static boolean contieneLowerCase(char letra) {
         String LowerCases = "abcdefghijklmnñopqrstuvxyz";
 
         return LowerCases.contains(Character.toString(letra));
