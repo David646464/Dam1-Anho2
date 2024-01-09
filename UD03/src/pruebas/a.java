@@ -1,10 +1,14 @@
 package pruebas;
 
+import java.util.Random;
+
 public class a {
     public static void main(String[] args) {
-        enum dia  {LUNES,MARTES,MIERCOLES,JUEVES,VIERNES,SABADO,DOMINGO;}
+        Random random = new Random();
+        
 
-        System.out.println(dia.values()[4]);
+
+
     }
     
 }
